@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false" />
-    <title>MINI APP template</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <!-- <link rel="manifest" href="/site.webmanifest"> -->
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="theme-color" content="#ff0066">
+    <title>pocket portals fhnw</title>
     <script src="./lib/hydra-synth.js"></script>
     <styLe>
         html,
@@ -30,28 +23,9 @@
 
 <body>
     <script type="module">
-
         const h = new Hydra()
+
         osc(10, 0.1, 0.2).out()
-
-        let acceleration = { x: 0, y: 0 }
-        let deviceOrientation = { alpha: 0, beta: 0, gamma: 0 }
-
-        window.addEventListener("devicemotion", (event) => {
-            acceleration = event.acceleration
-        })
-
-        window.addEventListener("deviceorientation", (event) => {
-            deviceOrientation = event
-        })
-
-        src(o0)
-            .scale(1, () => 1 + acceleration.x * 0.1, () => 1 + acceleration.y * 0.1)
-            .scrollY(() => -deviceOrientation.beta / 3000)
-            .scrollX(() => -deviceOrientation.gamma / 3000)
-            .layer(osc(4, 0.1, 0.8).mask(shape(4, 0.3, 0)))
-            .out()
-
     </script>
 </body>
 
